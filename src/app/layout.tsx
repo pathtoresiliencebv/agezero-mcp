@@ -3,6 +3,7 @@ import "./globals.css";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Sparkles } from "@/components/icons";
+import { MegaMenu } from "@/components/mega-menu";
 
 const SUBDOMAINS = {
   ui: "https://ui.agezero.io",
@@ -42,6 +43,9 @@ export default function McpLayout({ children }: { children: React.ReactNode }) {
             </span>
             AgeZero
           </Link>
+          <div className="hidden lg:block">
+            <MegaMenu />
+          </div>
           <nav className="hidden items-center gap-1 lg:flex">
             {CROSS_NAV.map((item) => (
               <Link
